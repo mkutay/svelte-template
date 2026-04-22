@@ -17,6 +17,7 @@ import {
  * Convert the result of a getSession or refreshSession call to a ResultAsync
  * that may contain a SessionError if the request fails or if there is no
  * active session.
+ *
  * @param result The result of a getSession or refreshSession call, containing
  * data and error properties.
  * @returns A ResultAsync containing the Session or a SessionError.
@@ -48,6 +49,7 @@ const toSessionResult = ({
 /**
  * Get the user from the Supabase client, returning a ResultAsync that may
  * contain a UserError if the request fails or if there is no user.
+ *
  * @param supabase The Supabase client to use for the request.
  * @returns A ResultAsync containing the User or a UserError.
  */
@@ -60,6 +62,7 @@ export const getUser = (supabase: SBClient): ResultAsync<User, UserError> =>
 /**
  * Get the session from the Supabase client, returning a ResultAsync that may
  * contain a SessionError if the request fails or if there is no active session.
+ *
  * @param supabase The Supabase client to use for the request.
  * @returns A ResultAsync containing the Session or a SessionError.
  */
@@ -71,6 +74,7 @@ export const getSession = (
 /**
  * Refresh the session using Supabase, returning a ResultAsync that may contain a
  * SessionError if refresh fails or if no session is returned.
+ *
  * @param supabase The Supabase client to use for the request.
  * @returns A ResultAsync containing the refreshed Session or a SessionError.
  */
@@ -82,6 +86,7 @@ export const refreshSession = (
 /**
  * Sign up a user with the given email and password, returning a ResultAsync
  * that may contain an SignUpError if the sign-up fails.
+ *
  * @param supabase The Supabase client to use for the request.
  * @param email The email of the user to sign up.
  * @param password The password of the user to sign up.
@@ -105,6 +110,7 @@ export const signUp = (
 /**
  * Sign in a user with the given email and password, returning a ResultAsync
  * that may contain a SignInError if the sign-in fails.
+ *
  * @param supabase The Supabase client to use for the request.
  * @param email The email of the user to sign in.
  * @param password The password of the user.
@@ -128,6 +134,7 @@ export const signIn = (
 /**
  * Sign out a user, returning a ResultAsync that may contain a SignOutError
  * if the sign-out fails.
+ *
  * @returns A ResultAsync that resolves if the sign-out is successful,
  * or contains a SignOutError if it fails.
  */
